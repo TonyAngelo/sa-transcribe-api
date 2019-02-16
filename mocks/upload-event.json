@@ -1,0 +1,8 @@
+{
+  "body": "{\"email\":\"someemail@email.com\",\"upload\":\"somefile.wav\",\"filename\":\"somename\",\"speakers\":\"3\"}",
+  "requestContext": {
+    "identity": {
+      "cognitoIdentityId": "USER-SUB-1234"
+    }
+  }
+}

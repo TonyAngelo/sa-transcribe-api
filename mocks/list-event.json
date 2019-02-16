@@ -1,0 +1,11 @@
+{
+  "body": "{\"limit\":\"20\"}",
+  "pathParameters": {
+    "clientId": "anonymous"
+  },
+  "requestContext": {
+    "identity": {
+      "cognitoIdentityId": "USER-SUB-1234"
+    }
+  }
+}

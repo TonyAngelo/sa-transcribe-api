@@ -1,0 +1,11 @@
+{
+  "pathParameters": {
+    "clientId": "anonymous",
+    "uploadId": "603841d0-20e5-11e9-9055-7515b3fa8f26"
+  },
+  "requestContext": {
+    "identity": {
+      "cognitoIdentityId": "USER-SUB-1234"
+    }
+  }
+}
