@@ -6,7 +6,7 @@ export async function main(event, context) {
   var transcribeservice = new AWS.TranscribeService();
 
   try {
-    var result = await transcribeservice.listVocabularies().promise();
+    var result = await transcribeservice.listVocabularies({MaxResults: 100}).promise();
     //console.log(result);
     
     return success(result);
