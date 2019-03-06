@@ -6,7 +6,7 @@ export async function main(event, context) {
   var stepfunctions = new AWS.StepFunctions();
   var params = {
     stateMachineArn: 'arn:aws:states:us-east-1:741625714969:stateMachine:audio-transcribe-createVocabulary',
-    input: "{\"rss\" : \"" + data['rss'] + "\"}",
+    input: "{\"list\" : \"" + data['list'] + "\"}",
     name: Math.round((new Date()).getTime() / 1000).toString()
   };
   try {
