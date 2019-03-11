@@ -52,6 +52,7 @@ provider:
         - 'transcribe:DeleteVocabulary'
         - 'transcribe:ListVocabularies'
         - 'transcribe:GetVocabulary'
+        - 'transcribe:UpdateVocabulary'
       Resource: '*'
     - Effect: Allow
       Action:

@@ -1,0 +1,8 @@
+{
+  "body": "{\"name\":\"Relationsheeps-and-Cowversations\",\"list\":[\"Relationsheeps\",\"Cowversations\"]}",
+  "requestContext": {
+    "identity": {
+      "cognitoIdentityId": "USER-SUB-1234"
+    }
+  }
+}
