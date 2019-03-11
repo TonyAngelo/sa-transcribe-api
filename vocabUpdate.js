@@ -27,7 +27,7 @@ export async function main(event, context) {
     },
     UpdateExpression: "set vocab = :val1",
     ExpressionAttributeValues: {
-      ':val1': data['list']
+      ':val1': JSON.stringify(data['list'])
     }
   };
   //dynamodb.update(dbParams, function(err, data) {
