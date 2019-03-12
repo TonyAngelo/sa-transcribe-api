@@ -4,7 +4,7 @@ import AWS from "aws-sdk";
 
 export async function main(event, context) {
   const data = JSON.parse(event.body);
-  var transcribeservice = new AWS.TranscribeService();
+  //var transcribeservice = new AWS.TranscribeService();
   const dynamodb = new AWS.DynamoDB.DocumentClient();
 
   //return dynamoDb[action](params).promise();
@@ -15,11 +15,11 @@ export async function main(event, context) {
   //   input: "{\"list\" : \"" + data['list'] + "\"}",
   //   name: Math.round((new Date()).getTime() / 1000).toString()
   // };
-  var tParams = {
-    LanguageCode: 'en-US',
-    Phrases: data['list'],
-    VocabularyName: data['name']
-  };
+  //var tParams = {
+    //LanguageCode: 'en-US',
+    //Phrases: data['list'],
+    //VocabularyName: data['name']
+  //};
   const dbParams = {
     TableName: 'audio-vocabulary',
     Key: {
@@ -35,14 +35,14 @@ export async function main(event, context) {
   //  else     console.log(data);           // successful response
   //});
   try {
-    var result = await transcribeservice.updateVocabulary(tParams).promise();
+    //var result = await transcribeservice.updateVocabulary(tParams).promise();
     //console.log(result);
     //await dynamoDbLib.call("update", dbParams);
     var dbresult = await dynamodb.update(dbParams).promise();
     console.log('success');
-    console.log(result);
+    console.log(dbresult);
     
-    return success(result);
+    return success(dbresult);
   } catch (e) {
     console.log(e)
     return failure({ status: false });
