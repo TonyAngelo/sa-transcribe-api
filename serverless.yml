@@ -58,6 +58,11 @@ provider:
         - 'states:DescribeExecution'
         - 'states:StartExecution'
       Resource: '*'
+    - Effect: Allow
+      Action:
+        - 'lambda:InvokeAsync'
+        - 'lambda:InvokeFunction'
+      Resource: 'arn:aws:lambda:us-east-1:741625714969:function:audio-transcribe-backend-getRSSVocab'
 
 functions:
   upload:
@@ -129,6 +134,14 @@ functions:
     events:
       - http:
           path: vocabulary/update
+          method: post
+          cors: true
+          authorizer: aws_iam
+  vocabRSS:
+    handler: vocabRSS.main
+    events:
+      - http:
+          path: vocabulary/rss
           method: post
           cors: true
           authorizer: aws_iam

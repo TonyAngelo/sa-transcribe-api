@@ -1,0 +1,8 @@
+{
+  "body": "{\"rss\":\"http://immigrationnation.libsyn.com/rss\"}",
+  "requestContext": {
+    "identity": {
+      "cognitoIdentityId": "USER-SUB-1234"
+    }
+  }
+}
