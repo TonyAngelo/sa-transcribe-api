@@ -14,7 +14,7 @@ export async function main(event, context) {
     TableName: 'audio-vocabulary',
     Item: {
       vocabName: data['name'],
-      vocab: data['vocab']
+      vocab: JSON.stringify(data['vocab'])
     }
   };
   
