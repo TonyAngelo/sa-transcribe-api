@@ -4,10 +4,6 @@ import * as dynamoDbLib from "./libs/dynamodb-lib";
 
 export async function main(event, context) {
   const data = JSON.parse(event.body);
-  //var transcribeservice = new AWS.TranscribeService();
-  // var params = {
-  //   VocabularyName: data['name']
-  // };
   const params = {
     TableName: 'audio-vocabulary',
     Key: {
